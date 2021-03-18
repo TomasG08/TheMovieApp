@@ -96,7 +96,9 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
                 }
                 is Resource.Failure -> {
                     binding.progressBar.visibility = View.GONE
-                    Log.d("Error", "${result.exception}")
+                    //Log.d("Error", "${result.exception}")
+                    print("Error!! -> ${result.exception}")
+                    //Agregando cambios al repositorio salu2
                 }
             }
         })
