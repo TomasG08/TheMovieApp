@@ -128,7 +128,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bookmark" />
+            android:text="@string/bookmark" />
 
 
     </LinearLayout>
@@ -154,7 +154,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My favs" />
+            android:text="@string/my_favs" />
 
     </LinearLayout>
 
@@ -177,7 +177,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Share" />
+            android:text="@string/share" />
 
     </LinearLayout>
 
@@ -185,7 +185,8 @@
         android:id="@+id/textViewOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Overview"
+        android:text="@string/overview"
+        android:layout_marginHorizontal="16dp"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

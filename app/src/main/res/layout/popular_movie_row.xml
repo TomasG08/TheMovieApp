@@ -10,10 +10,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Popular Movies"
+        android:text="@string/popular_movies"
         android:textStyle="bold"
         android:textColor="#F44336"
-        android:textSize="20dp"/>
+        android:textSize="20sp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_popular_movies"
