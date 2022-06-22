@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.cursoandroid.themovieapp.application.AppConstants
 import com.cursoandroid.themovieapp.core.BaseViewHolder
 import com.cursoandroid.themovieapp.data.model.Movie
 import com.cursoandroid.themovieapp.databinding.MovieItemBinding
@@ -45,7 +46,7 @@ class MovieAdapter(
     private inner class MoviesViewHolder(val binding: MovieItemBinding, val context: Context) :
         BaseViewHolder<Movie>(binding.root) {
         override fun bind(item: Movie) {
-            Glide.with(context).load("https://image.tmdb.org/t/p/w500/${item.poster_path}")
+            Glide.with(context).load("${AppConstants.IMAGE_URL}${item.poster_path}")
                 .centerCrop().into(binding.imageMovie)
         }
     }

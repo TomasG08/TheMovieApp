@@ -6,6 +6,7 @@ import android.view.View
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.cursoandroid.themovieapp.R
+import com.cursoandroid.themovieapp.application.AppConstants
 import com.cursoandroid.themovieapp.databinding.FragmentMovieDetailsBinding
 
 
@@ -16,24 +17,24 @@ class MovieDetailsFragment : Fragment(R.layout.fragment_movie_details) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMovieDetailsBinding.bind(view)
-        Glide.with(requireContext()).load("https://image.tmdb.org/t/p/w500/${args.posterImageUrl}")
+        Glide.with(requireContext()).load("${AppConstants.IMAGE_URL}${args.posterImageUrl}")
             .centerCrop().into(binding.imageMovie)
         Glide.with(requireContext())
-            .load("https://image.tmdb.org/t/p/w500/${args.backgroundImageUrl}").centerCrop()
+            .load("${AppConstants.IMAGE_URL}${args.backgroundImageUrl}").centerCrop()
             .into(binding.imageBackground)
         binding.textViewDescription.text = args.overview
         binding.textViewLanguage.text = getString(
             R.string.language,
             args.language
-        )  //resources.getText(R.string.language, args.language) //"Language ${args.language}"
+        )
         binding.textViewTitle.text = args.title
         binding.textViewReleased.text =
-            getString(R.string.released, args.releasedDate) //"Released ${args.releasedDate}"
+            getString(R.string.released, args.releasedDate)
         binding.textViewRating.text = getString(
             R.string.rating_average,
             args.voteAverage.toString(),
             args.voteCount.toString()
-        )//"${args.voteAverage} of (${args.voteCount} Reviews)"
+        )
 
     }
 }
