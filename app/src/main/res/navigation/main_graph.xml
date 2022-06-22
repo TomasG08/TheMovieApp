@@ -43,5 +43,9 @@
         <argument
             android:name="releasedDate"
             app:argType="string" />
+
+        <argument
+            android:name="video"
+            app:argType="boolean"/>
     </fragment>
 </navigation>

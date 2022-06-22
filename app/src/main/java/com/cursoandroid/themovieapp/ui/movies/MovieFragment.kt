@@ -107,7 +107,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie), MovieAdapter.OnMovieCli
     override fun onMovieClick(movie: Movie) {
         val action = MovieFragmentDirections.actionMovieFragmentToMovieDetailsFragment(
             movie.poster_path, movie.backdrop_path, movie.vote_average.toFloat(), movie.vote_count,
-            movie.overview, movie.title, movie.original_language, movie.release_date
+            movie.overview, movie.title, movie.original_language, movie.release_date, movie.video
         )
         findNavController().navigate(action)
     }

@@ -1,8 +1,10 @@
 package com.cursoandroid.themovieapp.ui.moviedetails
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.MediaController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.cursoandroid.themovieapp.R
@@ -17,6 +19,11 @@ class MovieDetailsFragment : Fragment(R.layout.fragment_movie_details) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMovieDetailsBinding.bind(view)
+
+        bindView()
+    }
+
+    private fun bindView(){
         Glide.with(requireContext()).load("${AppConstants.IMAGE_URL}${args.posterImageUrl}")
             .centerCrop().into(binding.imageMovie)
         Glide.with(requireContext())

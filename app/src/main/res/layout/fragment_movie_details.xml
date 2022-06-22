@@ -185,8 +185,8 @@
         android:id="@+id/textViewOverview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/overview"
         android:layout_marginHorizontal="16dp"
+        android:text="@string/overview"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -199,9 +199,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in aliquet magna. Nunc odio eros, pretium et imperdiet ac, aliquet at nunc. Nunc aliquam est sed commodo scelerisque. Nulla facilisi. Sed vestibulum scelerisque erat, sit amet efficitur leo eleifend et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi ex turpis, sodales at nisl et, viverra mollis mauris. "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewOverview" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewOverview"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in aliquet magna. Nunc odio eros, pretium et imperdiet ac, aliquet at nunc. Nunc aliquam est sed commodo scelerisque. Nulla facilisi. Sed vestibulum scelerisque erat, sit amet efficitur leo eleifend et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi ex turpis, sodales at nisl et, viverra mollis mauris. " />
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
